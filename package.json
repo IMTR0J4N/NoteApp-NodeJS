@@ -1,0 +1,23 @@
+{
+  "name": "noteapp-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/IMTR0J4N/NoteApp-NodeJS"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.10",
+    "nodemon": "^3.1.7"
+  }
+}
