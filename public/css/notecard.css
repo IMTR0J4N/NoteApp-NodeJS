@@ -1,0 +1,43 @@
+article {
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.title {
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.content {
+    width: 292px;
+    height: 200px;
+    resize: none;
+    background: none;
+    outline: none;
+    border: none;
+
+}
+
+.edit {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    svg {
+        fill: black;
+    }
+}

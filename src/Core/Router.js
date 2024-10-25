@@ -38,7 +38,7 @@ class Router {
     // Attacher la méthode render à l'objet response
     attachRenderMethod(res) {
         res.render = (viewPath, data = {}) => {
-            const fullPath = path.join(__dirname, '..', 'views', `${viewPath}.ejs`);
+            const fullPath = path.join(__dirname, '..', 'App/Views', `${viewPath}.ejs`);
 
             // Rendre uniquement le fichier passé en paramètre (viewPath)
             ejs.renderFile(fullPath, data, {}, (err, str) => {
@@ -59,8 +59,10 @@ class Router {
         const routePath = parsedUrl.pathname;
         const method = req.method.toUpperCase();
 
+        if(req.body) req.body = JSON.parse(req.body);
+
         // Vérifier si la requête concerne un fichier statique dans le dossier public
-        const publicPath = path.join(__dirname, '../..', 'public', routePath);
+        const publicPath = path.join(__dirname, '../../', 'public', routePath);
         if (fs.existsSync(publicPath) && fs.lstatSync(publicPath).isFile()) {
             // Détecter le type MIME selon le type de fichier
             const extname = path.extname(publicPath);

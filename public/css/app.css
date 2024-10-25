@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img, picture img, picture source, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body > h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > .searchbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    padding-right: 50px;
+    width: 40vw;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    border-radius: 5px;
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        background: none;
+    }
+
+    svg {
+        position: absolute;
+        right: 10px;
+        font-size: 1.5rem;
+        fill: black;
+    }
+}
+
+#createNote > button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    svg {
+        fill: black;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 50px;
+}

@@ -4,6 +4,7 @@ const NoteModel = require('../Models/Note');
 const getAllNotes = (req, res) => {
     try {
         const notes = NoteModel.getAllNotes();
+        console.log(notes)
         res.render('notes', { notes });
     } catch (error) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
@@ -35,8 +36,9 @@ const getNoteById = (req, res) => {
 
 // POST : Créer une nouvelle note
 const createNote = (req, res) => {
-    console.log(req)
-    const { title, content } = req.data.body;
+    const { title, content } = req.body;
+
+    console.log(title, content);
     
     if (!title || !content) {
         res.writeHead(400, { 'Content-Type': 'application/json' });

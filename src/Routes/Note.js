@@ -1,5 +1,5 @@
 const Router = require('../Core/Router');
-const { getAllNotes, createNote, updateNote, deleteNote, getNoteById } = require('../Controllers/Note');
+const { getAllNotes, createNote, updateNote, deleteNote, getNoteById } = require('../App/Controllers/Note');
 
 const NoteRouter = new Router();
 

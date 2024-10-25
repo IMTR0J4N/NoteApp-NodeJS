@@ -1,4 +1,4 @@
-const db = require('../config/database');
+const db = require('../Config/database');
 const { v4: uuidv4 } = require('uuid');
 
 
@@ -16,10 +16,12 @@ const getNoteById = (id) => {
 
 // Fonction pour créer une nouvelle note
 const createNote = (title, content) => {
-    const stmt = db.prepare('INSERT INTO notes (id, title, content) VALUES (?, ?)');
+    const stmt = db.prepare('INSERT INTO notes (id, title, content) VALUES (?, ?, ?)');
     const id = uuidv4();
 
     const result = stmt.run(id, title, content);
+
+
     return result;  // Retourne l'état de l'insertion
 };
 
